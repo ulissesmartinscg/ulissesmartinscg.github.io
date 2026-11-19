@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ulisses Gomes, computer science student.">
+    <meta name="author" content="Ulisses Gomes">
+
+    <title>Ulisses Gomes</title>
+
+    <link rel="icon" href="favicon/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <aside>
+        <header>
+            <div class="profile">
+                <img src="imagens/duck.svg" alt="Illustration of a duck incorporated into a Portuguese caravel">
+                <div class="profile-info">
+                    <h1>Ulisses Gomes</h1>
+                    <p class="march">Computer Science Student</p>
+                </div>
+            </div>
+
+            <nav class="main-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <div class="sidebar-footer">
+                <ul class="social-links">
+                    <li><a href="https://github.com/ulissesmartinscg?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="imagens/GitHub.webp" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/ulisses-martins-cunha-gomes-69b20241b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="imagens/linkedin-logo.png" alt=""></a></li>
+                    <li><a href="https://wa.me/5519996314524" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="imagens/whatsapp.png" alt=""></a></li>
+                    <li><a href="mailto:u.mc.gomes@gmail.com" aria-label="Email"><img src="imagens/aviao-de-papel.png" alt=""></a></li>
+                </ul>
+            </div>
+        <p class="copyright">&copy; <span id="current-year"></span> Ulisses Gomes</p>
+    </aside>
+
+    <main>
+        <section id="home">
+            <p class="welcome">Welcome to my portfolio!</p>
+            <p>Available for Freelance &amp; Full-time Roles</p>
+            <h2>Building things, solving problems, and learning how technology works.</h2>
+            <div class="home-buttons">
+                <a class="button-primary" href="#projects">View projects</a>
+                <a class="button-secondary" href="#contact">Get in touch</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>A little about me</h2>
+            <p>I'm studying computer science and exploring software development, cybersecurity, and game development. I like understanding how things work and trying to build things myself.</p>
+            <p>I learn best by experimenting and making things, even when they don't work the first time.</p>
+            <p>This site is where I'll share what I build and learn along the way.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <img src="imagens/tres_icones_projetos.svg" alt="Logo for my portfolio project">
+                    <h3>My portfolio</h3>
+                    <p>A portfolio in progress, inspired by Bruno Simon's interactive site. One day, my duck will explore it.</p>
+                </li>
+                <li>
+                    <img src="imagens/tres_icones_projetos2.svg" alt="Kanban board project logo">
+                    <h3>Kanban board</h3>
+                    <p>A tool for organizing tasks and keeping track of what needs to be done.</p>
+                </li>
+                <li>
+                    <img src="imagens/tres_icones_projetos3.svg" alt="Personal finance project logo">
+                    <h3>Personal finance manager</h3>
+                    <p>A tool for keeping track of income, expenses, and budgets.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Get in touch</h2>
+            <p>Have a question or an idea? Feel free to send me a message.</p>
+            <form id="contact-form" novalidate>
+                <div class="form-field-name">
+                    <label for="client-name">Your name</label>
+                    <input type="text" id="client-name" name="name" placeholder="e.g. Alex Morgan" autocomplete="name">
+                </div>
+                <div class="form-field-email">
+                    <label for="client-email">Email address</label>
+                    <input type="email" id="client-email" name="email" placeholder="you@example.com" autocomplete="email">
+                </div>
+                <div class="form-field-phone">
+                    <label for="client-phone">Phone number</label>
+                    <input type="tel" id="client-phone" name="phone" placeholder="e.g. +55 (19) 99999-9999" autocomplete="tel">
+                </div>
+                <div class="form-field-subject">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                </div>
+                <div class="form-field-message">
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your idea..."></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

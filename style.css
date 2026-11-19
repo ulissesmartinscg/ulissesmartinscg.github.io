@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #023047;
+    color: #f4f7f8;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body::before {
+    position: fixed;
+    z-index: 0;
+    inset: 0;
+    content: "";
+    background-image: url("imagens/pato-de-borracha.png");
+    background-repeat: repeat;
+    background-size: 90px;
+    filter: brightness(0) invert(1);
+    opacity: 0.035;
+    pointer-events: none;
+}
+
+aside {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 280px;
+    height: 100vh;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: #f8f3ef;
+    color: #023047;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(16%) saturate(900%) hue-rotate(347deg) brightness(90%) contrast(88%);
+}
+
+.profile h1 {
+    margin: 0;
+    color: #765536;
+    font-size: 20px;
+}
+
+.profile p {
+    margin: 0;
+    color: #6e5844;
+    font-size: 14px;
+}
+
+.main-navigation ul {
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation li {
+    margin-bottom: 8px;
+}
+
+.main-navigation a {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #efe7e0;
+    color: #6e5844;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    background-color: #e1d3c5;
+}
+
+.main-navigation a::before {
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(16%) saturate(900%) hue-rotate(347deg) brightness(90%) contrast(88%);
+}
+
+.main-navigation li:nth-child(1) a::before { background-image: url("imagens/farol.png"); }
+.main-navigation li:nth-child(2) a::before { background-image: url("imagens/pato-de-borracha.png"); }
+.main-navigation li:nth-child(3) a::before { background-image: url("imagens/livros.png"); }
+.main-navigation li:nth-child(4) a::before { background-image: url("imagens/o-email.png"); }
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(16%) saturate(900%) hue-rotate(347deg) brightness(90%) contrast(88%);
+}
+
+.copyright {
+    margin: 0;
+    color: #6e5844;
+    font-size: 13px;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 0;
+    padding: 0 40px;
+}
+
+main > section {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+main h2 {
+    color: #8ecae6;
+}
+
+#home {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home p {
+    margin: 0 0 16px;
+    color: #b88c60;
+    font-weight: bold;
+}
+
+#home .welcome {
+    margin-bottom: 8px;
+    color: #8ecae6;
+    font-size: 24px;
+}
+
+#home h2 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.home-buttons a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid #b88c60;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: #b88c60;
+    color: #023047;
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: #8ecae6;
+}
+
+.home-buttons a:hover {
+    opacity: 0.85;
+}
+
+#about p {
+    margin-bottom: 18px;
+}
+
+
+#projects ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#projects li {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 280px;
+    padding: 16px;
+    border: 1px solid #315669;
+    border-radius: 8px;
+}
+
+#projects img {
+    align-self: center;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+#projects h3 {
+    margin: 0;
+    color: #8ecae6;
+    font-size: 18px;
+}
+
+#projects li p {
+    margin: 0;
+    font-size: 15px;
+}
+
+#contact form {
+    width: 100%;
+}
+
+#contact > p {
+    color: #8ecae6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contact form > div {
+    margin-bottom: 16px;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #8ecae6;
+    border-radius: 5px;
+    background-color: #f8f3ef;
+    font: inherit;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    padding: 12px 26px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #b88c60;
+    color: #023047;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Small screens */
+@media (max-width: 760px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-basis: auto;
+        padding: 20px;
+    }
+
+    .main-navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    .main-navigation li {
+        margin: 0;
+    }
+
+    .main-navigation a {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .main-navigation a::before {
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        gap: 20px;
+        margin: 16px 0;
+    }
+
+    main {
+        padding: 0 22px;
+    }
+
+    main > section {
+        padding: 48px 0;
+    }
+
+    #home {
+        min-height: 70vh;
+    }
+
+    #home h2 {
+        font-size: 38px;
+    }
+
+    .home-buttons {
+        flex-wrap: wrap;
+    }
+
+    #projects ul {
+        flex-wrap: wrap;
+    }
+
+    #projects li {
+        min-width: 140px;
+    }
+}
